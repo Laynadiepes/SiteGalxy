@@ -1,0 +1,292 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    width:100%;
+    height: 150px;
+    background-color: #1A0E24;
+}
+
+nav{
+    width: 100%;
+    height: 30px;
+    background-color: #1A0E24;
+    padding-top: 10px;
+
+}
+
+main{
+    width: 100%;
+    height: 760px;
+    background-color: #311746 ;
+
+}
+
+footer{
+    padding-left: 80px;
+    width: 1840px;
+    height: 60px;
+    background-color: #1A0E24;
+    position:absolute;
+
+}
+.navegacao{
+    margin-left: 20px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+div{
+    position: absolute;
+}
+
+.texto{
+    color: white;
+    font-size: 33px;
+    text-align: center;
+  
+}
+p{
+    color: white;
+}
+
+#logopeq{
+    width: 20px;
+    height: 15px;
+}
+
+label{
+    color: #ffffff;
+
+}
+#idpc{
+    width: 150px;
+    height: 35px;
+    color: #311746 ;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border-color:#65358d ;
+    padding-left: 15px;
+}
+#idcheck{
+    width: 18px;
+    height: 15px;
+    color: #311746 ;
+
+}
+.div1{
+    margin-left: 1450px; 
+    margin-top: 70px; 
+    border-radius: 25px;
+    padding-top: 10px;
+    width: 150px; 
+    height: 30px; 
+    background-color: rgb(252, 252, 252);
+}
+#login{
+    margin-left: 660px;
+    margin-top: 50px; 
+    border-radius: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width: 650px; 
+    height: 650px; 
+    background-color: rgb(252, 252, 252);
+
+}
+#descricao{
+    color:#311746 ;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#labelc{
+    color:#311746 ;
+}
+#avalie{
+    margin-left: 300px;
+    margin-top: 150px; 
+    border-radius: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width: 500px; 
+    height: 400px; 
+    background-color: rgb(252, 252, 252);
+
+}
+#nota{
+    margin-left: 1100px;
+    margin-top: 150px; 
+    border-radius: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width: 500px; 
+    height: 400px; 
+    background-color: rgb(252, 252, 252);
+
+}
+
+#quiz{
+    margin-left: 100px;
+    margin-top: 80px; 
+    border-radius: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width: 1700px; 
+    height: 600px; 
+    background-color: rgb(252, 252, 252);
+    padding-top: 0px;
+
+}
+
+#col1, #col2, #col3, #col4{
+    width: 500px;
+    height: 510px;
+    margin-left: 20px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+tr>td{
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    border: 2px white groove;
+    background-color: #5b3180;
+    color: white;
+
+}
+table{
+    margin-top: 80px;
+    margin-left: 130px;
+}
+.numeracao, thead{
+    font-size: 25px;
+}
+
+tr h3{
+    color: rgb(241, 52, 52);
+    font-size: 20px;
+    margin-bottom: 0px;
+    
+}
+.galeria{
+    width:376px;
+    height: 255px;
+
+
+}
+video{
+   margin-left: 330px;
+margin-top: 50px;
+}
+
+#galvideo{
+    width: 1920px;
+    height: auto;
+    background-color: #311746 ;
+
+}
+
+.labelvideo{
+    color: white;
+    font-size: 35px;
+    margin-left: 350px;
+    padding-top: 100px;
+}
+.contato{
+    width: 65px;
+    height: 54px;
+    margin-right: 80px;
+}
+#idmensagem{
+    border-radius: 15px;
+    border-style: dotted;
+}
+
+#col1 {
+    margin-left: 80px;
+    background-color: #291638;
+
+}
+
+#col2 {
+    margin-left: 600px;
+    background-color: #3e2157;
+
+}
+
+#col3 {
+    margin-left: 1120px;
+    background-color: #5b3180;
+}
+.imgnews {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 160px;
+    height: 120px;
+
+}
+
+.labelnews {
+    margin-left: 190px;
+    color: #e0c3f8;
+
+}
+#respostas, #verNota{
+    margin-top: 565px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: dotted #5b3180;;
+}
+#respostas:hover{
+    background-color:#5b3180;
+}
+#verNota:hover{
+    background-color:#5b3180;
+}
+#a1{
+    background-color: rgb(51, 78, 25);
+}
+#a2{
+    background-color: rgb(119, 175, 63);
+}
+#a3{
+    background-color: rgb(255, 196, 0);
+}
+#a4{
+    background-color: rgb(255, 102, 0);
+}
+#a5{
+    background-color: rgb(146, 23, 23);
+}
+#enviar{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border-style: dotted;
+}
+#enviar:hover{
+    background-color: #1A0E24;
+}
+
+t{
+    color: white;
+}
+
+#curriculo{
+    margin-left:220px;
+    margin-top: 50px; 
+    border-radius: 30px;
+    padding-top: 10px;
+    text-align: center;
+    width: 1500px; 
+    height: 650px; 
+    background-color: rgb(252, 252, 252);
+
+}

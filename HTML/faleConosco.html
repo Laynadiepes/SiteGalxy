@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale conosco</title>
+    <link rel="stylesheet" href="../CSS/estiloBase.css">
+    <script src="../JS/geral.js" type="text/javascript"></script>
+
+    <style>
+        input {
+            width: 200px;
+            border-radius: 15px;
+            border-style: dotted;
+            border-color: #65358d;
+        }
+
+        input:hover {
+            background-color: #65358d;
+        }
+
+        label {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="padding-top: 20px;">
+            <img src="../Imagens/logo.png">
+        </div>
+
+        <div class="div1">
+            <a class="navegacao" href="formulario.html" style="color: #1A0E24; font-size: 15px;">CADASTRE-SE</a>
+        </div>
+
+        <div class="div1" style="margin-left: 1650px;">
+            <a class="navegacao" href="faleConosco.html" style="color: #1A0E24; font-size: 15px;">FALE CONOSCO </a>
+        </div>
+
+    </header>
+
+    <nav style="text-align: center;">
+        <a class="navegacao" href="index.html"> | Home |</a>
+        <a class="navegacao" href="historia.html"> | Sobre |</a>
+        <a class="navegacao" href="galeriaFotos.html"> | Fotos |</a>
+        <a class="navegacao" href="servicos.html"> | Novidades |</a>
+        <a class="navegacao" href="galeriaVideos.html"> | Vídeos |</a>
+    </nav>
+
+    <main style="background-image:url(../Imagens/cad.gif)">
+
+        <div style="margin-left: 425px; width: 1920px; height: 590px; margin-top: 50px; ">
+
+            <form>
+
+                <h3 style="color: white; margin-left: 390px; margin-top: -10px; text-shadow: 4px 3px 10px white;">ENTRE
+                    EM CONTATO CONOSCO</h3> <br> <br>
+                <label for="idNome">Nome completo: </label>
+                <input name="nome" id="idNome" type="text" onblur="verificaNome('idNome')">
+                <label style="margin-left: 39px;" for="idEmail">E-mail: </label>
+                <input name="email" id="idEmail" type="email" onblur="verificaEmail('idEmail')">
+                <label style="margin-left: 80px;" for="idTelefone">Telefone: </label>
+                <input name="telefone" id="idTelefone" type="tel" onblur="verificaTel('idTelefone')"><br><br>
+                <div id="bloco1" style="margin-left: 155px; width: 250px; height: 30px;  ">
+                    <t id="erro1"> </t> <br>
+                    <t id="erro2"> </t> <br>
+                    <t id="erro3"> </t> <br>
+                </div>
+                <div id="bloco2" style="margin-left: 480px; width: 250px; height: 30px; ">
+                    <t id="erro4"> </t> <br>
+
+                </div>
+                <div id="bloco3" style="margin-left: 860px; width: 250px; height: 30px; ">
+                    <t id="erro5"> </t> <br>
+
+                </div> <br> <br> <br>
+                <label style="margin-left: 485px;" for="idMensagem">Mensagem</label> <br>
+                <textarea name="mensagem" id="idMensagem" cols="130" rows="20"
+                    onblur="verificaMensagem('idMensagem')"></textarea>
+                <p style="margin-left: 100px;" id="erro5"></p>
+
+                <input style="color: #1A0E24; margin-left: 435px; height: 30px; font-size: 16px;" type="submit"
+                    value="Enviar" onclick="verificaEnvio()">
+                <p style="margin-left: 300px;" id="erro7"></p>
+
+            </form>
+
+        </div>
+
+        <div style="margin-left:780px; width: 1920px; height: 200px; margin-top: 640px; ">
+            <a href="mailto:galxy@galxy.com?Subject=Tenho%20d%FAvidas%20sobre%20a%20Galxy"><img class="contato"
+                    src="../Imagens/email.png"></a>
+            <a href="https://www.instagram.com/galxy.oficial/"><img class="contato" src="../Imagens/instagram.png"></a>
+            <a href="http://api.whatsapp.com/send?phone=21987287763"><img class="contato" src="../Imagens/wpp.png"></a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div style="height: 52px; width: 50%;">
+            <p>© 2021 Galxy. Todos os direitos reservados. | Desenvolvido por Layna Diepes!</p>
+        </div>
+
+        <div style="margin-left: 1220px; height: 52px; width: 50%;padding-top: 15px;">
+            <a class="navegacao" href="curriculo.html"> | Junte-se a Nós | </a>
+            <a class="navegacao" href="questionario.html"> | Quiz de Curiosidades | </a>
+            <a class="navegacao" href="avaliacao.html"> | Nos Avalie |</a>
+
+        </div>
+    </footer>
+
+    <script>
+        function verificaNome(newNome) {
+
+            verificaGeral(newNome);
+
+            let aux = document.getElementById(newNome).value;
+
+            if (verificaSeNum(aux)) {
+                document.getElementById("erro1").innerHTML = "- O nome não pode conter números";
+                document.getElementById(newNome).style.borderColor = "red";
+            } else {
+                document.getElementById("erro1").innerHTML = "";
+            }
+
+            if (verificaSePont(aux)) {
+                document.getElementById("erro2").innerHTML = "- O nome não pode conter pontuação";
+                document.getElementById(newNome).style.borderColor = "red";
+            } else {
+                document.getElementById("erro2").innerHTML = "";
+            }
+
+            if (aux.includes(" ")) {
+                document.getElementById("erro3").innerHTML = "";
+            } else {
+                document.getElementById("erro3").innerHTML = "- Insira o nome completo";
+                document.getElementById(newNome).style.borderColor = "red";
+            }
+
+        }
+
+        function verificaEmail(newEmail) {
+
+           verificaGeral(newEmail);
+
+            let cont =0;
+
+            let aux = document.getElementById(newEmail).value;
+
+            for (i=0; i<=aux.length; i++){
+                if (aux.charAt(i) == "@"){
+                    cont++;
+                }
+            }
+
+            if (cont == 1) {
+                document.getElementById("erro4").innerHTML = "";
+            } else {
+                document.getElementById("erro4").innerHTML = "- E-mail incorreto";
+                document.getElementById(newEmail).style.borderColor = "red";
+            }
+
+        }
+
+        function verificaTel(newTel) {
+            verificaGeral(newTel);
+
+            let aux = document.getElementById(newTel).value;
+
+            if (aux.length == 14) {
+                aux = aux.replace("(", "");
+                aux = aux.replace(")", "");
+                aux = aux.replace("-", "");
+            }
+
+            if (aux.length == 11 && verificaNum(aux)) {
+                let numFormat = "(" + aux.substring(0, 2) + ")" + aux.substring(2, 7) + "-" + aux.substring(7);
+                document.getElementById(newTel).value = numFormat;
+                document.getElementById("erro5").innerHTML = "";
+            } else {
+                document.getElementById("erro5").innerHTML = "- Telefone incorreto";
+                document.getElementById(newTel).style.borderColor = "red";
+            }
+
+
+        }
+
+        function verificaMensagem(newMensagem) {
+
+            verificaGeral(newMensagem);
+
+            let mensagem = document.getElementById(newMensagem).value;
+
+            if (mensagem.length < 30) {
+                document.getElementById("erro6").innerHTML = "- Mensagem muito pequena, ela deve ter no mínimo 30 caracteres";
+                document.getElementById(newMensagem).style.borderColor = "red";
+            } else {
+                document.getElementById("erro6").innerHTML = "";
+            }
+
+
+        }
+
+
+        function verificaEnvio() {
+
+            document.getElementById("erro7").innerHTML = "- Mensagem enviada com sucesso! Em breve entraremos em contato!";
+
+
+        }
+
+
+    </script>
+
+</body>
+
+
+</html>

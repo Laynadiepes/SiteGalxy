@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curriculo</title>
+    <link rel="stylesheet" href="../CSS/estiloBase.css">
+    <script src="../JS/geral.js" type="text/javascript" ></script>
+    <style>
+        input, select {
+            width: 200px;
+            height: 20px;
+            color: #311746;
+            border-color: #65358d;
+            border-style: dotted;
+            border-radius: 15px;
+            margin-right: 40px;
+            margin-bottom: 30px;
+        }
+
+        input:hover {
+            background-color: #65358d;
+        }
+
+        h4 {
+            color: #311746;
+        }
+
+        label {
+            color: #311746;
+            font-size: 18px;
+        }
+
+        t {
+            color: red;
+        }
+
+        form {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="padding-top: 20px;">
+            <img src="../Imagens/logo.png">
+        </div>
+
+        <div class="div1">
+            <a class="navegacao" href="formulario.html" style="color: #1A0E24; font-size: 15px;">CADASTRE-SE</a>
+        </div>
+
+        <div class="div1" style="margin-left: 1650px;">
+            <a class="navegacao" href="faleConosco.html" style="color: #1A0E24;font-size: 15px;">FALE CONOSCO</a>
+        </div>
+
+    </header>
+    <nav style="text-align: center;">
+        <a class="navegacao" href="index.html"> | Home |</a>
+        <a class="navegacao" href="historia.html"> | Sobre |</a>
+        <a class="navegacao" href="galeriaFotos.html"> | Fotos |</a>
+        <a class="navegacao" href="servicos.html"> | Novidades |</a>
+        <a class="navegacao" href="galeriaVideos.html"> | Vídeos |</a>
+
+    </nav>
+    <main style="background-image:url(../Imagens/cad.gif)">
+        <div id="curriculo">
+            <h2> Venha trabalhar conosco</h2>
+            <p id="descricao"> Se você é criativo, apaixonado pelo universo e gostaria de fazer parte do nosso time,
+                envie seu formulário de currículo para Galxy e junte-se a nós! </p> <br>   
+
+            <form>
+                <div style= "width:410px; height: 400px; text-align: right; margin-left: 40px; background-color:#F0ECF4; border-radius: 20px;"> 
+                <br>
+                    <label for="idNome">
+                    Nome completo:</label>
+                <input name="nome" id="idNome" type="text" onblur="verificaNome('idNome')"> <br>
+
+                <label for="idNomePai">
+                    Nome do Pai:</label>
+                <input name="nomepai" id="idNomePai" type="text" onblur="verificaNome('idNomePai')"> <br>
+
+                <label for="idNomeMae">
+                    Nome da Mãe:</label>
+                <input name="nomemae" id="idNomeMae" type="text" onblur="verificaNome('idNomeMae')"> <br>
+
+
+                <label for="idIdade">
+                    Idade:</label>
+                <input name="Idade" id="idIdade" type="number" onblur="verificaIdade('idIdade')"><br>
+
+
+                <label for="idCPF"> CPF:</label>
+                <input name="CPF" id="idCPF" type="text" onblur="verificaCPF('idCPF')"><br>
+
+                <label for="idTel">Telefone:</label>
+                <input name="Tel" id="idTel" type="tel" onblur="verificaTel('idTel')"><br>
+
+                <label for="idCel">Celular:</label>
+                <input name="Cel" id="idCel" type="tel" onblur="verificaCel('idCel')"><br>
+
+
+               </div>
+
+               <div style= "margin-left: 485px; width:410px; height: 400px; text-align: right; background-color:#F0ECF4; border-radius: 20px;"> 
+                <br>
+                <label for="idEmail">E-mail:</label>
+                <input name="email" id="idEmail" type="email" onblur="verificaEmail ('idEmail')"><br>
+
+                <label for="idSexo" style="margin-right:250px;">Sexo:</label><br>
+
+                <label for="idSexo" >Masculino</label>
+                <input name="sexo" id="idSexo" type="radio" style="width: 15px;margin-bottom: 5px;"><br>
+
+                <label for="idSexo">Feminino</label>
+                <input name="sexo" id="idSexo" type="radio" style="width: 15px;"> <br>
+
+                <label for="idDataN">
+                    Nascimento:</label>
+                <input name="dataN" id="idDataN" type="date" > <br>
+
+                <label for="idGraufundamental" style="margin-right:250px;">Escolaridade:</label> <br><br>
+                <label for="idGraufundamental">Fundamental completo</label>
+                <input name="grau" id="idGrau" type="checkbox" style="width: 15px; margin-bottom: 5px;"> <br>
+                <label for="idGrausuperior">Ensino médio completo</label>
+                <input name="grau" id="idGrau" type="checkbox" style="width: 15px; margin-bottom: 5px;"> <br>
+                <label for="idGrausuperior">Superior cursando</label>
+                <input name="grau" id="idGrau" type="checkbox" style="width: 15px; margin-bottom:5px;"> <br>
+                <label for="idGrausuperior">Superior completo</label>
+                <input name="grau" id="idGrau" type="checkbox" style="width: 15px;">
+                <div style="text-align: left; margin-left: 110px;">
+                    <t  id="erroCur1"> </t> <br>
+                    <t id="erroCur2"> </t> <br>
+                    <t id="erroCur3"> </t>
+            </div> 
+
+                </div>
+
+                <div style= "margin-left: 930px; width:410px; height: 400px; text-align: right; background-color:#F0ECF4; border-radius: 20px;"> 
+            <br>
+
+                <label for="idRua"> Rua:</label>
+                <input name="rua" id="idRua" type="text" style="width:  300px;" onblur="verificaGeral('idRua')">  <br>
+
+                <label for="idNum">Número:
+                </label>
+                <input name="num" id="idNum" type="number" style="width:  80px;" onblur="verificaGeral('idNum')">  <br>
+
+
+                <label for="idComplemento">Complemento:</label>
+                <input name="complemento" id="idComplemento" type="text" onblur="verificaGeral('idComplemento')"> <br>
+
+                <label for="idBairro">Bairro:</label>
+                <input name="bairro" id="idBairro" type="text" onblur="verificaGeral('idBairro')">  <br>
+
+                <label for="idCidade">Cidade:</label>
+                <input name="cidade" id="idCidade" type="text" onblur="verificaGeral('idCidade')">  <br>
+                <label for="idCidade">UF:</label>
+                <select id="idUF" nome="UF" type="text" value="País" style="width:  60px; height: 30px;">
+                    <option> AC</option>
+                    <option>AL</option>
+                    <option>AP </option>
+                    <option>AM </option>
+                    <option>BA </option>
+                    <option>CE </option>
+                    <option>DF </option>
+                    <option>ES </option>
+                    <option>GO </option>
+                    <option>MA </option>
+                    <option>MT </option>
+                    <option>MS </option>
+                    <option>MG </option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
+                </select><br>
+
+                <label for="idCEP">CEP:</label>
+                <input name="CEP" id="idCEP" type="text" style="width:  120px;" onblur="verificaCEP('idCEP')"> <br>
+
+                </div>
+            </form>
+    
+        <div style="margin-left: 650px;">
+            <input
+                style="color: #ffffff; margin-top: 480px; background-color:#311746;height: 30px; border-style: solid; font-size: 16px;"
+                type="submit" value=" Junte-se a nós " onclick="verificaEnvio()">
+        </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <div style="height: 52px; width: 50%;">
+            <p>© 2021 Galxy. Todos os direitos reservados. | Desenvolvido por Layna Diepes!</p>
+        </div>
+
+        <div style="margin-left: 1220px; height: 52px; width: 50%;padding-top: 15px;">
+            <a class="navegacao" href="curriculo.html"> | Junte-se a Nós | </a>
+            <a class="navegacao" href="questionario.html"> | Quiz de Curiosidades | </a>
+            <a class="navegacao" href="avaliacao.html"> | Nos Avalie |</a>
+
+        </div>
+
+    </footer>
+    <script>
+
+        
+        function verificaNome(newNome) {
+
+            verificaGeral(newNome);
+
+            let aux = document.getElementById(newNome).value;
+
+            if (verificaSeNum(aux)) {
+                document.getElementById("erroCur1").innerHTML = "- O nome não pode conter números";
+                document.getElementById(newNome).style.borderColor = "red";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "";
+            }
+
+            if (verificaSePont(aux)) {
+                document.getElementById("erroCur2").innerHTML = "- O nome não pode conter pontuação";
+                document.getElementById(newNome).style.borderColor = "red";
+            } else {
+                document.getElementById("erroCur2").innerHTML = "";
+            }
+
+            if (aux.includes(" ")) {
+                document.getElementById("erroCur3").innerHTML = "";
+            } else {
+                document.getElementById("erroCur3").innerHTML = "- Insira o nome completo";
+                document.getElementById(newNome).style.borderColor = "red";
+            }
+
+        }
+
+        function verificaEmail(newEmail) {
+
+            verificaGeral(newEmail);
+
+            let cont =0;
+
+            let aux = document.getElementById(newEmail).value;
+
+            for (i=0; i<=aux.length; i++){
+                if (aux.charAt(i) == "@"){
+                    cont++;
+                }
+            }
+
+            if (cont == 1) {
+                document.getElementById("erroCur1").innerHTML = "";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "- E-mail incorreto";
+                document.getElementById(newEmail).style.borderColor = "red";
+            }
+
+        }
+
+        function verificaTel(newTel) {
+            verificaGeral(newTel);
+
+            let aux = document.getElementById(newTel).value;
+
+            if (aux.length == 13) {
+                aux = aux.replace("(", "");
+                aux = aux.replace(")", "");
+                aux = aux.replace("-", "");
+            }
+
+            if (aux.length == 10 && verificaNum(aux)) {
+                let numFormat = "(" + aux.substring(0, 2) + ")" + aux.substring(2, 6) + "-" + aux.substring(6);
+                document.getElementById(newTel).value = numFormat;
+                document.getElementById("erroCur1").innerHTML = "";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "- Telefone incorreto";
+                document.getElementById(newTel).style.borderColor = "red";
+            }
+
+
+        }
+        function verificaCel(newCel) {
+            verificaGeral(newCel);
+
+            let aux = document.getElementById(newCel).value;
+
+            if (aux.length == 14) {
+                aux = aux.replace("(", "");
+                aux = aux.replace(")", "");
+                aux = aux.replace("-", "");
+            }
+
+            if (aux.length == 11 && verificaNum(aux)) {
+                let numFormat = "(" + aux.substring(0, 2) + ")" + aux.substring(2, 7) + "-" + aux.substring(7);
+                document.getElementById(newCel).value = numFormat;
+                document.getElementById("erroCur1").innerHTML = "";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "- Celular incorreto";
+                document.getElementById(newCel).style.borderColor = "red";
+            }
+
+
+        }
+        function verificaCEP(newCEP) {
+            verificaGeral(newCEP);
+
+            let aux = document.getElementById(newCEP).value;
+
+            if (aux.length == 9) {
+                aux = aux.replace("-", "");
+            }
+
+            if (aux.length == 8 && verificaNum(aux)) {
+                let numFormat = aux.substring(0, 5) + "-" + aux.substring(5);
+                document.getElementById(newCEP).value = numFormat;
+                document.getElementById("erroCur1").innerHTML = "";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "- CEP incorreto";
+                document.getElementById(newCEP).style.borderColor = "red";
+            }
+
+        }
+
+        function verificaCPF(newCPF) {
+            verificaGeral(newCPF);
+
+            let aux = document.getElementById(newCPF).value;
+
+            if (aux.length == 14) {
+                aux = aux.replace(".", "");
+                aux = aux.replace(".", "");
+                aux = aux.replace("-", "");
+            }
+
+            if (aux.length == 11 && verificaNum(aux)) {
+                let numFormat = aux.substring(0, 3) + "." + aux.substring(3, 6) + "." + aux.substring(6, 9) + "-" + aux.substring(9);
+                document.getElementById(newCPF).value = numFormat;
+                document.getElementById("erroCur1").innerHTML = "";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "- CPF incorreto";
+                document.getElementById(newCPF).style.borderColor = "red";
+            }
+        }
+
+
+        function verificaUF(newUF) {
+            verificaGeral(newUF);
+
+            let aux = document.getElementById(newUF).value;
+
+            if (aux.length > 2 || aux.length < 2 || verificaSeNum(aux)) {
+                document.getElementById("erroCur1").innerHTML = "- UF incorreto";
+                document.getElementById(newUF).style.borderColor = "red";
+            } else {
+                document.getElementById("erroCur1").innerHTML = "";
+                document.getElementById(newUF).value = aux.toUpperCase();
+            }
+        }
+
+
+
+    </script>
+</body>
+
+
+</html>

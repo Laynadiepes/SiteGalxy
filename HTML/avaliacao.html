@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="../CSS/estiloBase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family = Abrir + Sans: wght @ 300 & display = swap "
+        rel=" stylesheet ">
+        
+
+    <style>
+        h3 {
+            color: #311746;
+        }
+
+        fieldset {
+            width: 300px;
+            height: 15px;
+            ;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            border-color: #ffffff;
+            border-style: dotted;
+            text-align: left;
+
+        }
+
+        img {
+            padding-right: 80px;
+        }
+
+        #enviar:hover {
+            background-color: #5b3180;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="padding-top: 20px;">
+            <img src="../Imagens/logo.png">
+        </div>
+
+        <div class="div1">
+            <a class="navegacao" href="formulario.html" style="color: #1A0E24; font-size: 15px; ">CADASTRE-SE</a>
+        </div>
+
+        <div class="div1" style="margin-left: 1650px;">
+            <a class="navegacao" href="faleConosco.html" style="color: #1A0E24;font-size: 15px;">FALE CONOSCO</a>
+        </div>
+
+    </header>
+    <nav style="text-align: center;">
+        <a class="navegacao" href="index.html"> | Home |</a>
+        <a class="navegacao" href="historia.html"> | Sobre |</a>
+        <a class="navegacao" href="galeriaFotos.html"> | Fotos |</a>
+        <a class="navegacao" href="servicos.html"> | Novidades |</a>
+        <a class="navegacao" href="galeriaVideos.html"> | Vídeos |</a>
+
+
+    </nav>
+    <main style="background-image:url(../Imagens/cad.gif)">
+        <div>
+        <h2 id="idEnvio" style="margin-left: 770px; margin-top: 70px; color: white;"></h2>
+    </div>
+        <div id="avalie">
+            <h3> Qual seu nível de satisfação com o nosso site? </h3>
+            <form style="padding-left: 80px;">
+                <fieldset id="a1"> <input class="avaliacao1" name="aval" type="radio">Totalmente satisfeito</fieldset>
+                <fieldset id="a2"> <input class="avaliacao1" name="aval" type="radio">Satisfeito</fieldset>
+                <fieldset id="a3"><input class="avaliacao1" name="aval" type="radio">Neutro</fieldset>
+                <fieldset id="a4"><input class="avaliacao1" name="aval" type="radio">Insatisfeito</fieldset>
+                <fieldset id="a5"><input class="avaliacao1" name="aval" type="radio">Totalmente insatisfeito</fieldset>
+                <br>
+                <img src="../Imagens/sentimento.png">
+            </form>
+
+        </div>
+
+        <div id="nota">
+
+            <h3> Qualificando com uma nota de 1 a 10, o quanto gostou do nosso conteúdo? </h3>
+            <button id="bot1" onclick="botao('bot1')"> 1</button>
+            <button id="bot2" onclick="botao('bot2')"> 2</button>
+            <button id="bot3" onclick="botao('bot3')"> 3</button>
+            <button id="bot4" onclick="botao('bot4')"> 4</button>
+            <button id="bot5" onclick="botao('bot5')"> 5</button>
+            <button id="bot6" onclick="botao('bot6')"> 6</button>
+            <button id="bot7" onclick="botao('bot7')">7</button>
+            <button id="bot8" onclick="botao('bot8')"> 8</button>
+            <button id="bot9" onclick="botao('bot9')"> 9</button>
+            <button id="bot10" onclick="botao('bot10')"> 10</button>
+
+            <h3> Qual motivo da sua nota? </h3>
+            <textarea name="mensagem" id="idfeedback" cols="50" rows="12"
+                onblur="verificaMensagem('idfeedback')"></textarea>
+            <p id="erroFeed" style="color: red; text-align: left; margin-left: 40px;"> </p>
+
+        </div>
+        <input style="color: #1A0E24; margin-left: 860px; margin-top: 650px; font-size: 16px;" type="submit" id="enviar"
+            onclick="verificaEnvio()" value="Enviar Avaliação">
+
+
+
+    </main>
+    <footer>
+        <div style="height: 52px; width: 50%;">
+            <p>© 2021 Galxy. Todos os direitos reservados. | Desenvolvido por Layna Diepes!</p>
+        </div>
+
+        <div style="margin-left: 1220px; height: 52px; width: 50%;padding-top: 15px;">
+            <a class="navegacao" href="curriculo.html"> | Junte-se a Nós | </a>
+            <a class="navegacao" href="questionario.html"> | Quiz de Curiosidades | </a>
+            <a class="navegacao" href="avaliacao.html"> | Nos Avalie |</a>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        let contVazio=0;
+
+        function botao(bot) {
+
+            document.getElementById(bot).style.background = "#5b3180";
+        }
+
+        function verificaMensagem(newMensagem) {
+
+            contVazio++;
+
+            verificaGeral(newMensagem);
+
+            let mensagem = document.getElementById(newMensagem).value;
+
+            if (mensagem.length < 30) {
+                document.getElementById("erroFeed").innerHTML = "- Mensagem muito pequena, ela deve ter no mínimo 30 caracteres";
+                document.getElementById(newMensagem).style.borderColor = "red";
+            } else {
+                document.getElementById("erroFeed").innerHTML = "";
+            }
+
+
+        }
+
+        function verificaGeral(limpa) { //essa funcao limpa a escrita e diz se a input esta vazia
+
+            if (document.getElementById(limpa).value == "") {
+                document.getElementById(limpa).style.borderColor = "red";
+                document.getElementById(limpa).value = "Preencher ";
+            } else {
+                document.getElementById(limpa).style.borderColor = " #65358d";
+            }
+
+
+            let aux = document.getElementById(limpa).value;
+
+            aux = aux.trim();
+
+            while (aux.includes("  ")) {
+
+                aux = aux.replace("  ", " ");
+            }
+
+            document.getElementById(limpa).value = aux;
+
+        }
+
+        function verificaEnvio() {
+
+            document.getElementById("idEnvio").innerHTML = "Obrigada por enviar sua avaliação!";
+       
+    }
+
+    </script>
+</body>
+
+</html>
